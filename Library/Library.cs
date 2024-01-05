@@ -41,8 +41,8 @@ namespace Library
         public string Faculty { get; set; }
         public string HigherEducationInstitution { get; set; }
 
-        public Student(int course, string group, string faculty, string higherEducationInstitution, 
-            double numberEITPoints, double numberPointsEducationalDocument, string nameGeneralEducationInstitution, 
+        public Student(int course, string group, string faculty, string higherEducationInstitution,
+            double numberEITPoints, double numberPointsEducationalDocument, string nameGeneralEducationInstitution,
             string firstName, string lastName, DateTime birthday) : base
             (numberEITPoints, numberPointsEducationalDocument, nameGeneralEducationInstitution, firstName, lastName, birthday)
         {
@@ -51,7 +51,20 @@ namespace Library
             Faculty = faculty;
             HigherEducationInstitution = higherEducationInstitution;
         }
+    }
+    public class Teacher : Person
+    {
+        public string Position { get; set; }
+        public string Department { get; set; }
+        public string HigherEducationInstitution { get; set; }
 
-
+        public Teacher(string position, string department, string higherEducationInstitution,
+            string firstName, string lastName, DateTime birthday)
+        : base(firstName, lastName, birthday)
+        {
+            Position = position;
+            Department = department;
+            HigherEducationInstitution = higherEducationInstitution;
+        }
     }
 }
