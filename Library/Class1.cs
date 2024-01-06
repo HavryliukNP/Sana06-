@@ -37,6 +37,11 @@ namespace Library
             NumberPointsEducationalDocument = numberPointsEducationalDocument;
             NameGeneralEducationInstitution = nameGeneralEducationInstitution;
         }
+        public override string ShowInfo()
+        {
+            return ($"{FirstName} {LastName} {Birthday} {NumberEITPoints} {NumberPointsEducationalDocument} " +
+                $"{NameGeneralEducationInstitution}");
+        }
     }
     public class Student : Applicant
     {
@@ -54,6 +59,11 @@ namespace Library
             Group = group;
             Faculty = faculty;
             HigherEducationInstitution = higherEducationInstitution;
+        }
+        public override string ShowInfo()
+        {
+            return ($"{FirstName} {LastName} {Birthday} {NumberEITPoints} {NumberPointsEducationalDocument} " +
+                $"{NameGeneralEducationInstitution} {Course} {Group} {Faculty} {HigherEducationInstitution}");
         }
     }
     public class Teacher : Person
