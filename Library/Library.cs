@@ -67,4 +67,19 @@ namespace Library
             HigherEducationInstitution = higherEducationInstitution;
         }
     }
+    public class LibraryUser : Person
+    {
+        public string LibraryCardNumber { get; set; }
+        public DateTime IssueDate { get; set; }
+        public int AmountMonthlySubscriptionFee { get; set; }
+
+        public LibraryUser(string libraryCardNumber, DateTime issueDate, int amountMonthlySubscriptionFee,
+            string firstName, string lastName, DateTime birthday)
+        : base(firstName, lastName, birthday)
+        {
+            LibraryCardNumber = libraryCardNumber;
+            IssueDate = issueDate;
+            AmountMonthlySubscriptionFee = amountMonthlySubscriptionFee;
+        }
+    }
 }
