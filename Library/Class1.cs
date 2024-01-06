@@ -18,6 +18,10 @@ namespace Library
             LastName = lastName;
             Birthday = birthday;
         }
+        public virtual string ShowInfo()
+        {
+            return ($"{FirstName} {LastName} {Birthday}");
+        }
     }
     public class Applicant : Person
     {
