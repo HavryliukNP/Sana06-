@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Library;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Library
@@ -80,6 +82,10 @@ namespace Library
             Department = department;
             HigherEducationInstitution = higherEducationInstitution;
         }
+        public override string ShowInfo()
+        {
+            return ($"{FirstName} {LastName} {Birthday} {Position} {Department} {HigherEducationInstitution}");
+        }
     }
     public class LibraryUser : Person
     {
@@ -94,6 +100,10 @@ namespace Library
             LibraryCardNumber = libraryCardNumber;
             IssueDate = issueDate;
             AmountMonthlySubscriptionFee = amountMonthlySubscriptionFee;
+        }
+        public override string ShowInfo()
+        {
+            return ($"{FirstName} {LastName} {Birthday} {LibraryCardNumber} {IssueDate} {AmountMonthlySubscriptionFee}");
         }
     }
 }
