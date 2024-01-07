@@ -1,4 +1,8 @@
 ﻿using Library;
+using System.Text;
+
+Console.InputEncoding = Encoding.Unicode;
+Console.OutputEncoding = Encoding.Unicode;
 
 Person[] person = new Person[5];
 
